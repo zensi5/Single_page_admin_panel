@@ -1,0 +1,23 @@
+
+export const images = {
+    Ellipse: require('./Ellipse.png'),
+    Profile: require('./ProfilePic.png'),
+    Profile1: require('./profile1.png'),
+    Profile2: require('./profile2.png'),
+    Profile3: require('./profile3.png'),
+    Profile4: require('./profile4.png'),
+    Profile5: require('./profile5.png'),
+    Profile6: require('./profile6.png'),
+    Profile7: require('./profile7.png'),
+    Profile8: require('./profile8.png'),
+    Profile9: require('./profile9.png'),
+    Profile10: require('./profile10.png'),
+    Profile11: require('./profile11.png'),
+    Profile12: require('./profile12.png'),
+    Profile13: require('./profile13.png'),
+    Profile14: require('./profile14.png'),
+    Profile15: require('./profile15.png'),
+    France: require('./france.png'),
+    Germany: require('./germany.png'),
+    English: require('./english.png'),
+}

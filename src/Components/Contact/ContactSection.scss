@@ -1,0 +1,202 @@
+@import "../../Styles/global.scss";
+
+.ant-layout-content {
+    background: $background;
+}
+
+.ant-layout-contact {
+    height: 100vh;
+}
+
+.contactSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+
+    .topLeft {
+        display: flex;
+        justify-content: space-between;
+
+        .titleWrapper {
+            .title {
+                @include typography(34px, $black, 700, 64px);
+            }
+
+            .subTitle {
+                @include typography(18px, $grey, 400, 25px, "Open Sans");
+            }
+        }
+
+        @media (max-width: 1600px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .topRight {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+
+        .ant-input-affix-wrapper {
+            margin-right: 26px;
+            background-color: $secondary-color;
+            border-radius: 14px !important;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        input {
+            border-radius: 14px !important;
+            background-color: $secondary-color;
+        }
+
+        .view-btn {
+            display: flex;
+
+            .button {
+                background-color: $secondary-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 68px;
+                height: 68px;
+                margin-right: 16px;
+                box-shadow: 0px 4px 4px rgb(0 0 0 / 4%);
+                border: none;
+                border-radius: 14px;
+                color: #c4c4c4;
+
+                &.hover {
+                    color: var(--clr-primary);
+                }
+            }
+
+            .buttongrid {
+                margin-right: 26px;
+                color: var(--clr-primary);
+            }
+        }
+
+        .ctabtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include typography(18px, $white, 700, 34px);
+            @extend .button;
+            width: 181px;
+            height: 68px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+            border-radius: 14px;
+            background-color: var(--clr-primary);
+            border-color: transparent;
+
+            &:hover {
+                background-color: $secondary-color;
+                color: var(--clr-primary);
+            }
+        }
+    }
+
+    @media (max-width: 1600px) {
+        flex-direction: column;
+    }
+}
+
+.paginationSection {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 100px;
+
+    h3 {
+        @include typography(16px, $black, 400, 21px);
+        margin: auto 0;
+
+        .paginationNumber {
+            @include typography(16px, $black, 700, 21px);
+        }
+
+        @media (max-width: 768px) {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    .ant-pagination {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $grey;
+        border-radius: 16px;
+
+        .ant-pagination-item {
+            background: transparent;
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                @include typography(18px, $black , 500, 27px, Poppins);
+            }
+
+            &:hover {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .ant-pagination-item-active {
+            background: #6418C3;
+            box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.14);
+            border-radius: 14px;
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            border: none;
+
+            a {
+                @include typography(18px, $secondary-color , 700, 27px, Poppins);
+                padding: 12px;
+            }
+        }
+
+        .ant-pagination-prev,
+        .ant-pagination-next {
+            //  @extend .ant-pagination-item;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border: 1px solid $grey;
+            border-radius: 14px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .ant-pagination-prev {
+            left: -60px;
+        }
+
+        .ant-pagination-next {
+            right: -60px;
+        }
+
+        .ant-pagination-item-link {
+            border: 1px solid #C2C2C2;
+            border-radius: 14px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}

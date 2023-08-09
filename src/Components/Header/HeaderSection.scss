@@ -1,0 +1,355 @@
+@import "../../Styles/global.scss";
+
+.header {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $secondary-color;
+
+  .ant-input-affix-wrapper {
+    width: 490px;
+
+    @media (max-width: 1400px) {
+      width: 360px;
+    }
+
+    @media (max-width: 575px) {
+      width: 65px;
+      height: 65px;
+    }
+
+    ::placeholder {
+      @media (max-width: 575px) {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding-inline: 0;
+  }
+}
+.ant-input-prefix {
+  @media (max-width: 575px) {
+    padding: 8px !important;
+  }
+}
+
+.othermenu {
+  @include typography(16px, var(--clr-primary), 700, 30px);
+  display: flex;
+  align-items: center;
+  // margin: 0 78px;
+  text-decoration-line: underline;
+
+  @media (max-width: 1600px) {
+    display: none;
+  }
+}
+
+.badge-wrapper {
+  display: flex;
+  align-items: center;
+
+  .ant-badge {
+    margin-right: 30px;
+    color: $grey;
+
+    .ant-badge-count {
+      @include typography(14px, $secondary-color, 600, 21px, "Poppins");
+      width: 26px;
+      height: 26px;
+      background: #5ecfff;
+      border: 3px solid $secondary-color;
+      border-radius: 14px;
+      padding: 0;
+      box-shadow: 0 0 0 1px $secondary-color;
+    }
+
+    &:hover {
+      color: var(--clr-primary);
+    }
+
+    &:nth-child(n + 2) {
+      display: inline;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
+  }
+
+  .warning-badge {
+    .ant-badge-count {
+      background-color: #e328af !important;
+    }
+  }
+}
+
+.ant-select-selector {
+  height: 68px !important;
+  padding: 20px;
+  border-radius: 48px !important;
+  gap: 16px;
+  border: 1px solid $grey;
+  outline: none !important;
+  box-shadow: none !important;
+  @include typography(16px, $black, 700, 30px);
+  display: flex;
+  align-items: center;
+  background-color: $secondary-color !important;
+
+  .ant-select-selection-item {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 !important;
+    @include typography(16px, $grey, 400, 30px);
+
+    @media (max-width: 1200px) {
+      gap: 0;
+      border: none !important;
+    }
+  }
+
+  .ant-select-item {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover {
+    border-color: $grey !important;
+  }
+
+  @media (max-width: 1200px) {
+    gap: 0;
+  }
+}
+
+.country {
+  .ant-btn {
+    display: flex;
+    align-items: center;
+    @include typography(16px, $black, 700, 30px);
+    width: 177px;
+    height: 68px;
+    // margin-right: 54px;
+    border: 1px solid #f0f0f0;
+    border-radius: 46px;
+    justify-content: space-evenly;
+
+    &.hover {
+      border-color: blue !important;
+    }
+
+    span {
+      display: inline;
+
+      @media (max-width: 1600px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1600px) {
+      border: none;
+      width: auto;
+      height: auto;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  .ant-select-dropdown {
+    .ant-item-selected {
+      background-color: pink !important;
+    }
+  }
+
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+
+.countryLabel {
+  display: inline;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.flages {
+  width: 30px;
+  height: 30px;
+}
+
+.ant-divider {
+  display: inline;
+  height: 56px;
+  border-radius: 8px;
+  background-color: $secondary-color;
+
+  @media (max-width: 575px) {
+    display: none;
+  }
+}
+
+.HeaderProfile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    display: flex;
+    margin-right: 24px;
+
+    @media (max-width: 1600px) {
+      margin-right: 0;
+    }
+  }
+
+  .Profile {
+    margin-right: 51px;
+
+    .ProfileName {
+      @include typography(16px, $black, 700, 17px);
+    }
+
+    .ProfilePost {
+      @include typography(14px, $grey, 400, 26px);
+    }
+
+    @media (max-width: 1600px) {
+      display: none;
+    }
+  }
+
+  .downArrow {
+    display: inline;
+
+    @media (max-width: 1600px) {
+      display: none;
+    }
+  }
+}
+
+.profileXs {
+  display: none;
+
+  .xsName {
+    @include typography(16px, $black, 700, 17px);
+  }
+
+  .xsPost {
+    @include typography(14px, $grey, 400, 26px);
+  }
+
+  @media (max-width: 1600px) {
+    display: inline;
+  }
+}
+
+.ant-dropdown-menu-item {
+  .ant-dropdown-menu-title-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    @include typography(16px, $black, 700, 30px);
+  }
+}
+
+.profileDropdown {
+  margin-left: 10px;
+  color: $grey;
+}
+
+.anticon {
+  color: $grey;
+}
+
+.notificationPopover {
+  width: 280px;
+}
+
+.notificationContent {
+  overflow-y: hidden;
+  height: 320px;
+
+  .notiWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .notiContent {
+      margin-left: 15px;
+    }
+
+    .notiTitle {
+      @include typography(14px, $black-dark, 700, 20px, "Open Sans");
+      white-space: nowrap;
+      width: 182px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .notiDescription {
+      @include typography(12px, $grey, 500, 20px, "Open Sans");
+    }
+  }
+
+  &:hover {
+    overflow-y: auto;
+  }
+}
+
+.ant-timeline {
+  padding-top: 20px;
+
+  .ant-timeline-item-last {
+    padding-bottom: 0 !important;
+  }
+
+  .ant-timeline-item-content {
+    @include typography(14px, $black-dark, 600, 20px, "Open Sans");
+    padding-bottom: 10px;
+  }
+}
+
+// .notificationContent::-webkit-scrollbar {
+//   display: none;
+
+//   &:hover {
+//     display: block;
+//   }
+// }
+
+.ant-select-item-option-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ant-select-item-option-selected {
+  background-color: transparent !important;
+}
+
+.themeBtn {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+
+  .themeIcon {
+    width: 30px;
+    height: 30px;
+  }
+}

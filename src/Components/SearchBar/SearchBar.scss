@@ -1,0 +1,25 @@
+@import '../../Styles/variables.scss';
+
+.ant-input-affix-wrapper {
+    width: 490px;
+    height: 68px;
+    border-radius: 46px !important;
+    background-color: $background;
+    border: none;
+
+    &:focus {
+        border-color: pink !important;
+    }
+    input {
+        border-radius: 46px !important;
+        background-color: $background;
+    }
+
+    .ant-input-prefix {
+        padding-right: 20px;
+        padding-left: 30px;
+    }
+    .ant-input-suffix {
+        display: none;
+    }
+}

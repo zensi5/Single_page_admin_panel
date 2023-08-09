@@ -1,0 +1,8 @@
+@mixin typography($size, $color, $weight, $line-height, $font: 'Cairo') {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    line-height: $line-height;
+    font-family: $font;
+    // font-family: 'Poppins', sans-serif;
+}

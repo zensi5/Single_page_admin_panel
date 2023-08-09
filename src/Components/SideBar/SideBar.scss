@@ -1,0 +1,180 @@
+@import '../../Styles/mixins.scss';
+@import '../../Styles/variables.scss';
+
+.sidebar {
+    box-shadow: 18px 4px 35px rgba(0, 0, 0, 0.02);
+    // background-color: var(--clr-secondary);
+    background-color: $secondary-color !important;
+    height: 100%;
+    overflow: hidden auto;
+    position: fixed !important;
+    z-index: 2;
+    top: 0;
+    left: auto;
+    bottom: 0;
+}
+
+.ant-menu {
+    background-color: $secondary-color !important;
+
+}
+
+.mainmenu {
+    @include typography(16px, $grey, 700, 22px, 'Open Sans');
+    letter-spacing: 1px;
+}
+
+.menuHidden {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 33px;
+    padding-bottom: 20px;
+    gap: 20px;
+
+    .iconWrapper {
+        display: flex;
+        align-items: center;
+        color: $black;
+
+        .iconText {
+            margin-left: 15px;
+        }
+
+    }
+
+    .hamburgerControls {
+        display: flex;
+        align-items: center;
+        //     margin-left: 70px;
+        background-color: transparent;
+        border: none;
+
+        .hamburger {
+            cursor: pointer;
+            color: $black;
+        }
+    }
+
+    &.collapsed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $black;
+    }
+}
+
+.ant-menu-item {
+    overflow: visible !important;
+    display: flex;
+    align-items: center;
+    height: 50px !important;
+    border-radius: 0;
+    @include typography(18px, $grey, 600, 33px);
+
+    &:active {
+        background-color: transparent !important;
+    }
+
+    &:hover {
+        color: var(--clr-primary) !important;
+        background-color: transparent !important;
+    }
+}
+
+.ant-menu {
+    padding-left: 50px - 30px;
+}
+
+.ant-menu-submenu-title {
+    display: flex;
+    align-items: center;
+    @include typography(18px, $grey, 600, 33px);
+
+    &:hover {
+        color: var(--clr-primary) !important;
+        background-color: transparent !important;
+    }
+
+    &:active {
+        background-color: transparent !important;
+    }
+}
+
+.ant-menu-item-selected {
+    position: relative;
+    background: transparent !important;
+    color: var(--clr-primary) !important;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 6px;
+        height: 50px;
+        background: var(--clr-primary);
+        border-radius: 25px;
+    }
+
+    &:active {
+        background-color: transparent !important;
+    }
+}
+
+.ant-menu-inline-collapsed {
+
+    .ant-menu-submenu-title {
+        display: block;
+        padding-inline: 0 !important;
+        overflow: hidden;
+    }
+
+    .ant-menu-item {
+        display: block;
+        padding-left: 0;
+    }
+}
+
+.banner {
+    height: 203px;
+    width: 245px;
+    padding-left: 20px;
+    padding-top: 33px;
+    margin: 50px auto;
+    border-radius: 32px;
+    background-image: url('../../assets/images/Ellipse.png'), linear-gradient(139.14deg, #1CBBFF 23.19%, #4FF3FE 104.35%);
+    background-repeat: no-repeat;
+    box-shadow: 0px 14px 28px rgba(94, 207, 255, 0.31);
+    background-position: right bottom;
+
+    .bannerText {
+        @include typography(23px, $white, 700, 34px);
+        margin-bottom: 15px;
+        margin-top: 5px;
+        max-width: 195px;
+    }
+}
+
+.footerSidebar {
+    padding-left: 50px;
+
+    .footerName {
+        @include typography(16px, $grey, 700, 30px);
+    }
+
+    .footerRef {
+        @include typography(14px, $grey, 400, 26px);
+
+        .redHeart {
+            color: crimson;
+        }
+    }
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    @include typography(16px, $grey, 600, 30px);
+}

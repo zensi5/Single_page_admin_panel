@@ -1,0 +1,122 @@
+@import '../../../Styles/global.scss';
+
+.ant-card-bordered {
+   border: 1px solid $secondary-color;
+}
+
+.ant-card {
+   background-color: transparent;
+}
+
+.ant-card-body {
+   height: 359px;
+   height: 100%;
+   width: 276px;
+   border-radius: 14px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+   background: $secondary-color;
+   position: relative;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   .moreMenu {
+      position: absolute;
+      right: 20px;
+
+      .ant-btn {
+         border: none;
+         box-shadow: none;
+         background: $secondary-color;
+      }
+   }
+
+   .profilePic {
+      position: relative;
+      margin-bottom: 14px;
+
+      img {
+         width: 105px;
+         height: 105px;
+         border-radius: 26px;
+      }
+
+      .companylogo {
+         position: absolute;
+         bottom: 0;
+         right: -20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 42px;
+         height: 42px;
+
+         border-radius: 12px;
+         display: flex;
+
+         h4 {
+            @include typography(14px, $secondary-color, 800, 19px);
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   .about {
+      text-align: center;
+      margin-bottom: 28px;
+
+      .name {
+         @include typography(18px, $black, 700, 23px);
+         margin-bottom: 5px
+      }
+
+      .designation {
+         @include typography(14px, $grey, 400, 20px, 'Open Sans');
+      }
+
+      .companyName {
+         @include typography(14px, var(--clr-primary), 600, 20px, 'Open Sans');
+      }
+   }
+
+   .contactWrapper {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 16px;
+      width: 100%;
+      @include typography(14px, $black, 600, 19px);
+
+      &:hover {
+         .contactIcon {
+            background-color: var(--clr-primary);
+         }
+
+         path {
+            fill: $secondary-color;
+         }
+      }
+
+      .contactIcon {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 36px;
+         height: 36px;
+         background: #f6eeff;
+         border-radius: 12px;
+
+         .themeColor {
+            color: var(--clr-primary);
+         }
+      }
+
+      .contactStyles {
+         @include typography(14px, $black, 600, 20px, 'Open Sans');
+      }
+   }
+}
+
+.popover {
+   width: 146px;
+}
