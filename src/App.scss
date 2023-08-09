@@ -1,0 +1,6 @@
+@import "./Styles/global.scss";
+@import "./Styles/reset.scss";
+
+::placeholder {
+  @include typography(16, $secondary-color, 600, 30px);
+}

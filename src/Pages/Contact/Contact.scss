@@ -1,0 +1,12 @@
+.contact-expanded {
+    margin-left: 340px;
+    transition: all 0.3s;
+
+    @media (max-width:992px) {
+        margin-left: 80px;
+    }
+}
+
+.contact-collapsed {
+    margin-left: 80px;
+}
